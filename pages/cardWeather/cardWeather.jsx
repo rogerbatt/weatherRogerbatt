@@ -5,7 +5,6 @@ import {useGeolocation} from 'react-use';
 
 export default function CardWeather() {
   const location = useGeolocation();
-  console.log(location.longitude);
   const [user, setUser] = useState();
   
 
@@ -27,7 +26,7 @@ export default function CardWeather() {
             <div className="flex flex-col items-center justify-center rounded-lg m-2 box row-span-3 col-start-1 hover:ring-4 hover:ring-yellow-100 bg-gradient-to-b from-yellow-200 to-yellow-400 p-10">
                 <img 
                 className="w-32"
-                src={"http://openweathermap.org/img/wn/" + user?.weather[0].icon + "@2x.png"}
+                src={"https://openweathermap.org/img/wn/" + user?.weather[0].icon + "@2x.png"}
                 />
                 
                 <div className="text-5xl mb-10 text-center">
