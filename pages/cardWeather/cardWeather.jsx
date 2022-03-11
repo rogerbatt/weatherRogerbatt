@@ -17,8 +17,8 @@ export default function CardWeather() {
     })
   }, [location.longitude, location.latitude]);
   
-  const pordosol = new Date(user?.sys.sunset*1000).toLocaleTimeString("pt-BR")
-  const nascerdosol = new Date(user?.sys.sunrise*1000).toLocaleTimeString("pt-BR")
+  const pordosol = new Date(user?.sys.sunset*1000).toLocaleTimeString("UTC")
+  const nascerdosol = new Date(user?.sys.sunrise*1000).toLocaleTimeString("UTC")
   
 
   return (
