@@ -17,7 +17,9 @@ export default function CardWeather() {
     })
   }, [location.longitude, location.latitude]);
   
-  const time = new Date({user?.sys.sunset}).toLocaleDateString("pt-BR")
+  const pordosol = new Date(user?.sys.sunset*1000).toLocaleTimeString("pt-BR")
+  const nascerdosol = new Date(user?.sys.sunrise*1000).toLocaleTimeString("pt-BR")
+  
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -74,8 +76,8 @@ export default function CardWeather() {
                     Extra                    
                 </div>
                 <ul className="mt-3">
-                  <li>Nascer do sol: {user?.sys.sunrise}</li>
-                  <li>Pôr do sol: {time}</li>
+                  <li>Nascer do sol: {nascerdosol}</li>
+                  <li>Pôr do sol: {pordosol}</li>
                   <li>Pressão: {user?.main.pressure} hPa</li>
                 </ul>
                 
