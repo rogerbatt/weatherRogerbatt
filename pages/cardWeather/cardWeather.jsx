@@ -16,6 +16,8 @@ export default function CardWeather() {
       console.error("Problem - The API is requesting out of time" + err);
     })
   }, [location.longitude, location.latitude]);
+  
+  const time = new Date({user?.sys.sunset}).toLocaleDateString("pt-BR")
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -73,7 +75,7 @@ export default function CardWeather() {
                 </div>
                 <ul className="mt-3">
                   <li>Nascer do sol: {user?.sys.sunrise}</li>
-                  <li>Pôr do sol: {user?.sys.sunset}</li>
+                  <li>Pôr do sol: {time}</li>
                   <li>Pressão: {user?.main.pressure} hPa</li>
                 </ul>
                 
