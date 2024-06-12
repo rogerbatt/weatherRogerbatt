@@ -22,7 +22,7 @@ export default function CardWeather() {
   
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center ">
         <div className="grid overflow-hidden grid-cols-2 grid-rows-3 gap-5">
             <div className="flex flex-col items-center justify-center rounded-lg m-2 box row-span-3 col-start-1 hover:ring-4 hover:ring-blue-300 bg-gradient-to-b from-blue-500 to-blue-600 text-blue-100">
                 <img 
